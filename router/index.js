@@ -18,6 +18,22 @@ router.get('/books', async(req, res, next)=>{
     }
 })
 
+router.get("/authors/:id/authored", async (req, res, next)=>{
+    try{
+      res.send(
+          await Author.findAll({
+            where: {id: req.params.id},
+            include: [
+              {model: Book, as: "authored"}
+            ]
+          })
+      )
+    }
+    catch(ex){
+        next(ex);
+    }
+});
+
 // router.get('/authors/:id/authored', async(req, res, next)=>{
 //     try{
 //         res.send(await Author.findAll({
