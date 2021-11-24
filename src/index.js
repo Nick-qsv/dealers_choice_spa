@@ -30,10 +30,10 @@ const renderBooks = (books)=>{
 };
 
 const renderAuthored = (books)=>{
-    const html = books.map(
+    const html = books.authored.map(
         (book)=>`
         <li>
-        ${book.name}
+        ${book.title}
         </li>`
     ).join('');
     authoredList.innerHTML = html;

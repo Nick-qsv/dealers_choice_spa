@@ -21,8 +21,8 @@ router.get('/books', async(req, res, next)=>{
 router.get("/authors/:id/authored", async (req, res, next)=>{
     try{
       res.send(
-          await Author.findAll({
-            where: {id: req.params.id},
+          await Author.findByPk(req.params.id, {
+            
             include: [
               {model: Book, as: "authored"}
             ]
