@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="/dist/main.js" defer></script>
+    <style>
+      body {
+        font-family: verdana;
+        padding: 1rem;
+      }
+      main {
+        display: flex;
+      }
+      main > * {
+        flex: 1;
+      }
+      .selected {
+          background-color: dodgerblue;
+      }
+      .selected a{
+          color: cornsilk;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Nick's Favorite Books</h1>
+    <main>
+        <div>
+            <h2>Authors</h2>
+            <ul id='author-list'>
+            </ul>
+        </div>
+        <div>
+            <h2>Books</h2>
+            <ul id='book-list'>
+            </ul>
+        </div>
+        <div>
+            <h2>Who Authored This Book?</h2>
+            <ul id='authored-list'>
+            </ul>
+        </div>
+    </main>
+  </body>
+</html>
